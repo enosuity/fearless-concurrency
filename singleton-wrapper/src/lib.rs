@@ -49,7 +49,6 @@ where T: Clone + Copy + Display + std::fmt::Debug
         }); 
 
         let x = Arc::new(Mutex::new(inst.lock().unwrap().as_ref().unwrap().clone()));
-        println!("x: {:?}", x);
         x
     }    
 }
