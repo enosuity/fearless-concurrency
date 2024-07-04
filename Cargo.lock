@@ -6,8 +6,13 @@ version = 3
 name = "fearless-concurrency"
 version = "0.1.0"
 dependencies = [
+ "performance-considerations",
  "singleton-wrapper",
 ]
+
+[[package]]
+name = "performance-considerations"
+version = "0.1.0"
 
 [[package]]
 name = "singleton-wrapper"

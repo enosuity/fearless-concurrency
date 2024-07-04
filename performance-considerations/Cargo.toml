@@ -1,0 +1,11 @@
+[package]
+name = "performance-considerations"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[features]
+defaults = ["mutex_vs_rwlock"]
+
+mutex_vs_rwlock = []

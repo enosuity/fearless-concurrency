@@ -1,4 +1,4 @@
-workspace = { members = ["singleton-wrapper"] }
+workspace = { members = [ "performance-considerations","singleton-wrapper"] }
 [package]
 name = "fearless-concurrency"
 version = "0.1.0"
@@ -8,3 +8,4 @@ edition = "2021"
 
 [dependencies]
 singleton-wrapper = { path = "./singleton-wrapper", default = false }
+performance-considerations = { path = "./performance-considerations", default = false }
