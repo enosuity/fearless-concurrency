@@ -1,15 +1,11 @@
 #![allow(unused)]
 
-
-
 use std::{sync::{Arc, Mutex, RwLock}, thread::{sleep, spawn}, time::{Duration, Instant}};
 #[cfg(feature = "mutex_vs_rwlock")]
 
 const NUM_THREADS: usize = 10;
 
 const NUM_ITERATIONS: usize = 1_000_000;
-
-
 
 fn mutex_benchmarking(no_of_threads: usize) -> Duration{
     let now_mutex = Instant::now();
@@ -22,7 +18,7 @@ fn mutex_benchmarking(no_of_threads: usize) -> Duration{
             for j in 0..NUM_ITERATIONS {
                 let mut counter = counter_clone.lock().unwrap();
                 *counter += 1;
-            }
+            } 
         });
         list.push(handle);
     }
@@ -72,7 +68,7 @@ pub fn mutex_vs_rwlock_benchmarking(){
     if rw_duration.as_secs_f32() < mut_duration.as_secs_f32() {
         println!("Rwlock has higher speed.");
     } else {
-        println!("Mutex has higher speed.")
+        println!("Mutex has higher speed.");
     }
 
 }

@@ -3,9 +3,14 @@
 version = 3
 
 [[package]]
+name = "custom-lock-guard"
+version = "0.1.0"
+
+[[package]]
 name = "fearless-concurrency"
 version = "0.1.0"
 dependencies = [
+ "custom-lock-guard",
  "performance-considerations",
  "singleton-wrapper",
 ]

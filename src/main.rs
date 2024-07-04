@@ -9,7 +9,11 @@ use std::{
 };
 
 use singleton_wrapper::*;
-use performance_considerations::mutex_vs_rwlock_speed_test;
+use performance_considerations::mutex_vs_rwlock_benchmarking;
+
+
+use custom_lock_guard::*;
+
 
 #[derive(Debug)]
 struct ArrayWrapper<T, const N: usize> {
@@ -144,7 +148,10 @@ fn use_thread_safe_stack() {
 
 fn main() {
     println!("Hello world!");
-    mutex_vs_rwlock_benchmarking();
+    use_of_custom_lock_guard();
+    use_of_rw_custom_lock_guard()
+    
+    // mutex_vs_rwlock_benchmarking();
     // show_case_singleton_wrapper();
     // use_thread_safe_stack();
     // handle_mutex_poison();
